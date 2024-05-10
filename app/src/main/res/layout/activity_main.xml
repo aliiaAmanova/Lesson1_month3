@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/button"
+        android:onClick="onButtonClick"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+       android:layout_marginTop="30dp"
+        android:text="Отправить"
+        android:textSize="20sp"
+        android:textStyle="italic|bold"
+        android:backgroundTint="@color/orange"
+        android:layout_marginRight="15dp"
+        android:layout_marginLeft="15dp"
+
+        app:layout_constraintTop_toBottomOf="@+id/editTextPassword" />
+
+    <EditText
+        android:id="@+id/editTextPassword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Введите пароль"
+        android:textColor="@color/orange"
+        android:textSize="20sp"
+        android:layout_marginStart="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:text="Вход через социальные сети"
+        android:textAlignment="center"
+        android:textStyle="bold"
+        android:textColor="@color/orange"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/editTextPassword"
+        android:layout_marginBottom="150dp"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="или"
+        app:layout_constraintBottom_toTopOf="@id/editTextPassword"
+        android:layout_marginBottom="30dp"
+        android:textAlignment="center"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:textColor="@color/orange"/>
+
+
+<LinearLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:paddingHorizontal="10dp"
+    android:orientation="horizontal"
+    tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/button1"
+        android:backgroundTint="@color/blue"
+        android:text="facebook"
+        style="@style/Base.Button"
+        app:layout_constraintTop_toBottomOf="@id/textView"
+        tools:layout_editor_absoluteX="0dp"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@id/button2"
+        android:backgroundTint="@color/lightBlue"
+        android:text="Twitter"
+        style="@style/Base.Button"
+        android:layout_marginStart="5dp"
+        app:layout_constraintStart_toEndOf="@+id/button1"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@id/button3"
+        android:backgroundTint="@color/red"
+        android:text="Google"
+        style="@style/Base.Button"
+        android:layout_marginStart="5dp"
+        app:layout_constraintStart_toEndOf="@+id/button2"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:backgroundTint="@color/grayBlue"
+        android:text="VK"
+        style="@style/Base.Button"
+        android:layout_marginStart="5dp"
+        app:layout_constraintStart_toEndOf="@+id/button3"
+        tools:ignore="MissingConstraints" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
